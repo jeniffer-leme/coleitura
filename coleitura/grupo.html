@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coleitura</title>
+    <link rel="icon" href="imagens/favicon.png" type="image/png"/>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+
+      <h1>Coleitura</h1>
+      <div class="container">
+        <div class="sidebar">
+        <nav>
+           <span h2 class="logo-text">CoLeitura</span>
+          <ul>
+            <li><a href="index.html"><img src="imagens/pagina-inicial.png" class="icon-img" alt="Pagina Inicial"><span class="label">Início</span></a></li>
+            <li><a href="grupo.html"><img src="imagens/grupo.png" class="icon-img" alt="Criar Grupo"><span class="label">Grupos</span></a></li>
+            <li><a href="estante.html"><img src="imagens/pilha-de-livros.png" class="icon-img" alt="Livros"><span class="label">Estante</span></a></li>
+            <li><a href="index.html#sobre"><img src="imagens/sobre.png" class="icon-img" alt="Sobre"><span class="label">Sobre</span></a></li>
+            <li><a href="form.html"><img src="imagens/criar-conta.png" class="icon-img" alt="Criar Grupo"><span class="label">Criar grupo</span></a></li>
+            <li><a href="#"><img src="imagens/perfil.png" class="icon-img" alt="Perfil"><span class="label" id="abrirModal">Perfil</span></a></li>
+            <li><a href="login.html"><img src="imagens/saida.png" class="icon-img" alt="Sair"><span class="label">Sair</span></a></li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+
+        <div id="meuModal" class="modal">
+        <div class="modal-conteudo">
+        <span class="fechar">&times;</span>
+        <h2 id="nomeUsuarioModal"></h2>
+        
+        <div class="foto-container">
+          <img id="fotoPreview" alt="Foto do usuário">
+          <input type="file" src="" id="fotoInput" accept="image/*" />
+        </div>
+
+        <form id="editarUsuarioForm">
+          <input type="email" id="emailEditar" placeholder="Email" required />
+          <input type="password" id="senhaEditar" placeholder="Senha" required />
+          <button type="submit">Salvar alterações</button>
+        </form>
+      </div>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <section class="hero">
+        <h2>Seus grupos disponíveis:</h2>
+        <p>
+          Participe de grupos de leitura, comente, marque e discuta cada página
+          com quem está lendo com você.
+        </p>
+        
+        <button onclick="entrarGrupo('Harry Potter')">📘 Grupo: Harry Potter</button>
+        <button onclick="entrarGrupo('1984')">📕 Grupo: 1984</button>
+        <button onclick="entrarGrupo('Duna')">📗 Grupo: Duna</button>
+
+        <!-- Modal oculto -->
+        <section id="juliaCasoUso" class="section" style="display: none;">
+            <h3 id="tituloGrupo"> </h3>
+            <button onclick="voltarParaInicio()">← Voltar</button>
+
+            <div id="detalhesGrupo">
+            <p>Você entrou no grupo de leitura do livro <strong id="nomeLivro">[Livro]</strong>.</p>
+
+            <div id="generoLivro">
+              <h4>Gênero: </h4>
+            </div>
+
+            <div id="descricaoLivro">
+              <h4>Descrição: </h4>
+            </div>
+
+            <div id="pdfLivro">
+                <h4>Livro: <span id="tituloPDF">[Título]</span> (PDF)</h4>
+                <div class="pdf-container">
+                <div style="display: flex; justify-content: center; align-items: center; padding: 40px; background-color: #f0f0f0; min-height: 100vh;">
+                    <iframe id="iframePDF"
+                    src="" 
+                    width="800" 
+                    height="600" 
+                    style="border: none; box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); border-radius: 8px;">
+                    </iframe>
+                </div>
+                </div>
+            </div>
+
+            <button id="spoilerToggle">🔒 Spoiler: Desativado</button>
+
+            <div id="comentariosGrupo">
+                <h4>Comentários Anteriores</h4>
+                <ul></ul>
+            </div>
+            <!-- Botão de capitulo concluido - ainda nao funcionando
+            <div id="progressoLeitura">
+                <h4>Meta da Semana</h4>
+                <p>Capítulo 1 a 3 — 75% concluído</p>
+                <button onclick="marcarComoConcluido()">✅ Marcar como concluído</button>
+            </div>
+            -->
+            <br>
+            <br>
+            <div id="forumGrupo">
+                <h4>Digite seu comentário:</h4>
+                <textarea placeholder="Comente suas teorias e dúvidas..."></textarea>
+                <button>💬 Enviar</button>
+            </div>
+            </div>
+        </section>
+
+        <section id="formGrupo" class="section" style="display: none;">
+          <h3>Criar Novo Grupo</h3>
+          <form id="formularioGrupo">
+            <input type="text" placeholder="Nome do grupo" required />
+            <input type="text" placeholder="Nome do livro" required />
+            <textarea placeholder="Descrição do grupo"></textarea>
+            <button type="submit">Criar Grupo</button>
+          </form>
+          <button onclick="fecharFormulario()">Fechar</button>
+        </section>
+    </section>    
+
+    <!-- Botão flutuante e fórum lateral -->
+    <div id="forumToggleWrapper">
+      <button id="botaoForumToggle">💬</button>
+
+      <aside id="forumCapitulos">
+        <div class="forum-container">
+          <h4>Fórum por Capítulo</h4>
+
+          <label for="capituloSelect">Capítulo:</label>
+          <select id="capituloSelect"></select>
+
+          <textarea id="mensagemCapitulo" placeholder="Digite sua mensagem..."></textarea>
+          <button id="enviarMensagemCapitulo">💬 Enviar</button>
+
+          <div id="mensagensCapitulo">
+            <h5>Mensagens deste capítulo</h5>
+            <ul></ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Coleitura</p>
+        <div class="footer-nav">
+          <div>👥<br />Amizades</div>
+          <div>🔄<br />Conectar</div>
+          <div>🏠<br />Início</div>
+          <div>⭐<br />Favoritos</div>
+          <div>💬<br />Mensagens</div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="javascript/script.js"></script>
+    
+    <script>
+      //script novo pois dentro do script.js nao estava funcionando
+      document.addEventListener("DOMContentLoaded", () => {
+        let containerHero = document.querySelector(".hero");
+
+        let gruposSalvos = JSON.parse(localStorage.getItem("gruposCriados")) || [];
+
+        gruposSalvos.forEach(grupo => {
+          let btn = document.createElement("button");
+          btn.textContent = `📚 Grupo: ${grupo.nomeGrupo}`;
+          btn.onclick = () => entrarGrupo(grupo.nomeGrupo);
+          containerHero.appendChild(btn);
+        });
+      });
+
+      function entrarGrupo(nomeGrupo) {
+        let grupo = (JSON.parse(localStorage.getItem("gruposCriados")) || []).find(g => g.nomeGrupo === nomeGrupo);
+        
+        if (!grupo) {
+          alert("Grupo não encontrado!");
+          return;
+        }
+
+        document.getElementById("juliaCasoUso").style.display = "block";
+        document.getElementById("tituloGrupo").textContent = "Grupo: " + grupo.nomeGrupo;
+        document.getElementById("nomeLivro").textContent = grupo.nomeLivro;
+        document.getElementById("tituloPDF").textContent = grupo.nomeLivro;
+        document.getElementById("descricaoLivro").innerHTML = `<h4>Descrição:</h4><p>${grupo.descricao}</p>`;
+        document.getElementById("generoLivro").innerHTML = `<h4>Gênero:</h4><p>${grupo.genero}</p>`;
+        document.getElementById("iframePDF").src = grupo.pdf;
+
+        // Oculta os botões de grupo
+        let botoes = document.querySelectorAll(".hero > button");
+        botoes.forEach(btn => btn.style.display = "none");
+      }
+
+      function voltarParaInicio() {
+        document.getElementById("juliaCasoUso").style.display = "none";
+        let botoes = document.querySelectorAll(".hero > button");
+        botoes.forEach(btn => btn.style.display = "inline-block");
+      }
+    </script>
+
+
+  </body>
+</html>
