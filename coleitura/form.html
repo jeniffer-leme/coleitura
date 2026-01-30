@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coleitura</title>
+  <link rel="icon" href="imagens/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/form.css" />
+</head>
+
+<body>
+  <header>
+    <div class="topoForm">
+      
+<a href="index.html" title="Voltar"  class="voltar">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+    <path fill-rule="evenodd" d="M9.53 2.47a.75.75 0 0 1 0 1.06L4.81 8.25H15a6.75 6.75 0 0 1 0 13.5h-3a.75.75 0 0 1 0-1.5h3a5.25 5.25 0 1 0 0-10.5H4.81l4.72 4.72a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+  </svg>
+</a>
+
+
+      <h1 class="titulo">Coleitura</h1>
+    </div>
+  </header>
+
+  <main>
+
+
+    <form id="form">
+      <h2>Formulário Criar Grupo</h2>
+
+      <label for="nomeGrupo">Nome do grupo</label><br>
+      <input type="text" name="nomeGrupo" id="nomeGrupo" required placeholder="(O nome do grupo deve ser igual ao livro escolhido)"><br><br>
+
+     <label for="livroSelecionado">Escolha um livro da estante</label><br>
+      <select id="livroSelecionado" required>
+        <option value="">Selecione um livro</option>
+      </select><br><br>
+
+      <label for="descricao">Descrição do grupo</label><br>
+      <textarea name="descricao" id="descricao" rows="4" required></textarea><br><br>
+
+      <label for="genero">Gênero do livro</label><br>
+      <select name="genero" id="genero" required>
+        <option value="">Selecione</option>
+        <option>Romance</option>
+        <option>Terror</option>
+        <option>Ficção</option>
+        <option>Aventura</option>
+        <option>Fantasia</option>
+        <option>Biografia</option>
+        <option>Suspense</option>
+        <option>Outro</option>
+      </select><br><br>
+
+      <label for="visibilidade">Visibilidade</label><br>
+      <select name="visibilidade" id="visibilidade" required>
+        <option value="">Selecione</option>
+        <option>Público</option>
+        <option>Privado</option>
+      </select><br><br>
+
+      <button type="submit">Criar</button>
+
+    </form>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Coleitura</p>
+      <div class="footer-nav">
+        <div>👥<br />Amizades</div>
+        <div>🔄<br />Conectar</div>
+        <div>🏠<br />Início</div>
+        <div>⭐<br />Favoritos</div>
+        <div>💬<br />Mensagens</div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="javascript/script.js"></script>
+
+</body>
+
+</html>
