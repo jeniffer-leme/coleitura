@@ -1,0 +1,88 @@
+:root {
+  --azulbebe: #e8e8fc;
+  --azulescuro: #001b54;
+  --branco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #c59cf4;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.login-box {
+  background-color: var(--azulbebe);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-icon {
+  width: 100px;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.login-box h2,
+.login-box h3 {
+  color: var(--azulescuro);
+  margin-bottom: 1rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.login-box .btn {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: var(--azulescuro);
+  color: var(--branco);
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-box .btn:hover {
+  background-color: #000f3d;
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.success-msg {
+  color: green;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
