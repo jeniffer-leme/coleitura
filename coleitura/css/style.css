@@ -1,0 +1,570 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+
+:root {
+  --roxoclaro: #c59cf4;
+  --roxomedio: #ba89f1;
+  --azulescuro: #001b54;
+  --azulbotao: #001b54;
+  --rosadestaque: #f799b0;
+  --azulbebe: #e8e8fc;
+  --branco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--roxoclaro);
+  color: var(--azulescuro);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 60px;
+  background-color: #0c2a6c;
+  overflow-x: hidden;
+  overflow-y: auto; 
+  transition: width 0.3s ease;
+  padding-top: 20px;
+  border-radius: 0 10px 10px 0;
+  z-index: 1000;
+}
+
+.sidebar:hover {
+  width: 180px; 
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 16px 0; 
+}
+
+.sidebar a {
+  color: var(--branco);
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 8px 10px; 
+  font-size: 0.85rem; 
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon {
+  width: 24px; 
+  text-align: center;
+  font-size: 18px; 
+}
+
+.icon-img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.icon-grupo-img {
+  width: 30px;
+  height: 30px;
+ vertical-align: bottom;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.label {
+  opacity: 0;
+  margin-left: 8px;
+  font-size: 0.85rem;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar:hover .label {
+  opacity: 1;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header {
+  background-color: var(--azulescuro);
+  color: var(--branco);
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: var(--roxomedio);
+}
+
+.hero {
+  background-color: var(--azulbebe);
+  padding: 3rem;
+  border-radius: 20px;
+  margin: 2rem auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.hero:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: var(--azulescuro);
+  margin-bottom: 1rem;
+}
+
+.hero p{
+  font-size: 1.1rem;
+}
+
+.ilustracao {
+  width: 160px;
+  margin: 1rem auto;
+  display: block;
+}
+
+.section {
+  background-color: var(--azulbebe);
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.section h3 {
+  color: var(--azulescuro);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.section p {
+  color: var(--azulescuro);
+  font-size: 1rem;
+}
+
+footer {
+  margin-top: 2rem;
+  background-color: var(--azulescuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 1rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 1rem; /* espaçamento entre os botões */
+  width: 80%;
+}
+
+.btn {
+  flex: 1; /* cada botão ocupa 50% */
+  padding: 0.75rem;
+  background-color: var(--azulbotao);
+  color: var(--branco);
+  border: none;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #000f3d;
+}
+
+
+
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 0.5rem;
+}
+
+.footer-nav div {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-conteudo {
+  background: var(--roxoclaro);
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.foto-container {
+  margin: 20px 0;
+}
+
+.foto-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.foto-container input {
+  display: block;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background: var(--azulbotao);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.excluir {
+  background: #d32f2f;
+}
+
+#pdfLivro {
+  height: 100vh; /* faz o bloco ocupar a altura toda da tela */
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-container {
+  flex: 1; /* faz o container crescer para ocupar o resto do espaço */
+  overflow: hidden;
+  position: relative;
+}
+
+.pdf-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#sobre p, li, #grupos p{
+  font-size: 1.1rem; 
+}
+
+#sobre b {
+  color:#6b32ab;
+}
+
+#grupos, #sobre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #e8e9fc;
+  border-radius: 15px;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* importante para responsividade */
+}
+
+#imagem-grupo img {
+  width: 100%;
+  max-width: 175px;
+  border-radius: 25px;
+}
+
+
+#texto-sobre {
+  flex: 1;
+  min-width: 250px;
+}
+
+
+#grupos ul{
+  padding-left: 1.2rem;
+}
+
+.lista-e-imagem {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap; /* para responsividade */
+}
+
+.lista-e-imagem ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lista-e-imagem li, #grupos li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+#imagem-grupo-lista img {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+#imagem-estante img{
+  max-width: 230px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.logo-text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar:hover .logo-text {
+  opacity: 1;
+}
+
+.filtros-estante {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.filtros-estante button {
+  background-color: #9370DB;  
+  color: white;
+  border: 4px solid rgb(255, 255, 255);
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 25px;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filtros-estante button:hover {
+  background-color: #6a0dad;
+  color: white;
+  transform: scale(1.08);
+}
+
+.categoria-livros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-livro {
+  display: flex;
+  flex-direction: column; /*imagem em cima e texto embaixo */
+  align-items: center;
+  position: relative;
+  background-color:#f8f4ff9a;
+  border-radius: 15px;
+  box-shadow: 20px 4px 8px rgba(0,0,0,0.1);
+  width: 180px;
+  text-align: center;
+  margin: 15px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.card-livro h3,
+.card-livro p {
+  margin: 5px 0;
+}
+
+
+.card-livro:hover .overlay-sinopse {
+  opacity: 1;
+}
+
+.card-livro:hover{
+  transform: scale(1.05);
+}
+
+.card-livro img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.overlay-sinopse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.79);
+  color: white;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.categoriaSelect {
+  margin-top: 10px;
+  padding: 4px;
+  font-size: 0.9em;
+}
+
+.card-livro.modo-edicao .overlay-sinopse {
+  display: none !important;
+}
+
+.card-livro.modo-edicao {
+  border: 1px dashed #ccc;
+  padding-bottom: 10px;
+}
+
+#forumToggleWrapper {
+  position: fixed;
+  top: 150px;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+}
+
+#botaoForumToggle {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+#forumCapitulos {
+  width: 0;
+  overflow: hidden;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px 0 0 10px;
+  transition: width 0.3s ease;
+  max-height: 80vh;
+  display: none;
+}
+
+#forumCapitulos.ativo {
+  width: 300px;
+  display: block;
+}
+
+.forum-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#forumCapitulos textarea {
+  resize: none;
+  margin-bottom: 10px;
+  height: 80px;
+}
+
+#forumCapitulos ul {
+  list-style: none;
+  padding-left: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
