@@ -1,1 +1,149 @@
+:root {
+  --roxoclaro: #c59cf4;
+  --roxomedio: #a479d4;
+  --azulescuro: #001b54;
+  --azulbotao: #001b54;
+  --rosadestaque: #f799b0;
+  --azulbebe: #e8e8fc;
+  --branco: #ffffff;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--roxoclaro);
+  color: var(--azulescuro);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header {
+  background-color: var(--azulescuro);
+  color: var(--branco);
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+#logo {
+  height: 80px;
+  position: absolute;
+  left: -6rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#form {
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f4f4f4f1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family:"Segoe UI", sans-serif;
+}
+
+#form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--azulescuro);
+  font-weight: 900;
+}
+
+#form label {
+  font-weight: bold;
+  color: var(--azulescuro);
+  display: block;
+  margin-top: 1rem;
+}
+
+#form input,
+#form select,
+#form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+#form input:focus,
+#form select:focus,
+#form textarea:focus {
+  border-color: #4b3a85;
+  outline: none;
+}
+
+#form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#form button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.8rem;
+  background-color: #6a54b4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#form button:hover {
+  background-color: #4e3b93;
+  transform: scale(1.03);
+}
+
+.titulo {
+    font-size: 280%;
+    margin: 0;
+    margin-right: 17%;
+    flex: 1;
+}
+
+.voltar {
+  width: 90px;       
+  height: 40px;
+  margin-left: 5%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.voltar svg{
+  width: 50px;
+  height: 40px;
+  stroke: white;          
+  stroke-width: 1.5;     
+  fill: none;
+}
+
+.voltar:hover {
+  transform: scale(1.1);
+}
+
+.topoForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
