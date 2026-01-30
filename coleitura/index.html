@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coleitura</title>
+    <link rel="icon" href="../imagens/favicon.png" type="image/png"/>
+    <link rel="stylesheet" href="../estilos/style.css" />
+  </head>
+  <body>
+    <header>
+
+      <h1>Coleitura</h1>
+      <div class="container">
+        <div class="sidebar">
+        <nav>
+           <span h2 class="logo-text">CoLeitura</span>
+          <ul>
+            <li><a href="index.html"><img src="../imagens/pagina-inicial.png" class="icon-img" alt="Pagina Inicial"><span class="label">Início</span></a></li>
+            <li><a href="grupo.html"><img src="../imagens/grupo.png" class="icon-img" alt="Criar Grupo"><span class="label">Grupos</span></a></li>
+            <li><a href="estante.html"><img src="../imagens/pilha-de-livros.png" class="icon-img" alt="Livros"><span class="label">Estante</span></a></li>
+            <li><a href="#sobre"><img src="../imagens/sobre.png" class="icon-img" alt="Sobre"><span class="label">Sobre</span></a></li>
+            <li><a href="form.html"><img src="../imagens/criar-conta.png" class="icon-img" alt="Criar Grupo"><span class="label">Criar grupo</span></a></li>
+            <li><a href="#"><img src="../imagens/perfil.png" class="icon-img" alt="Perfil"><span class="label" id="abrirModal">Perfil</span></a></li>
+            <li><a href="login.html"><img src="../imagens/saida.png" class="icon-img" alt="Sair"><span class="label">Sair</span></a></li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+
+        <div id="meuModal" class="modal">
+        <div class="modal-conteudo">
+        <span class="fechar">&times;</span>
+        <h2 id="nomeUsuarioModal"></h2>
+        
+        <div class="foto-container">
+          <img id="fotoPreview" src="" alt="Foto do usuário">
+          <input type="file" id="fotoInput" accept="image/*" />
+        </div>
+
+        <form id="editarUsuarioForm">
+          <input type="email" id="emailEditar" placeholder="Email" required />
+          <input type="password" id="senhaEditar" placeholder="Senha" required />
+          <button type="submit">Salvar alterações</button>
+        </form>
+      </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>Bem-vindo ao seu clube do livro digital!</h2>
+        <img src="../imagens/leitora.png" alt="Leitora" class="ilustracao" />
+        <p>
+          Participe de grupos de leitura, comente, marque e discuta cada página
+          com quem está lendo com você.
+        </p>
+      </section>
+
+      <section id="grupos" class="section">
+        <div class="grupo-leitura">
+        <h3><img src="../imagens/grupo.png" class="icon-grupo-img" alt="Grupos de Leitura">Grupos de Leitura</h3>
+
+        <p>
+          <b>Participe dos Grupos de Leitura</b><br>
+          Descubra pessoas que compartilham o mesmo amor pelos livros que você!
+          Nos grupos de leitura, você poderá:<br><br>
+          <ul>
+            <li>Comentar cada capítulo.</li>
+            <li>Trocar ideias.</li>
+            <li>Viver a leitura em comunidade.<br>
+            <li>Ter moderação ativa e alertas de spoiler que garantem um espaço seguro e divertido para todos os leitores.<br><br>
+          </ul>
+          <b>Entre, interaja e transforme a leitura em uma experiência coletiva!</b><br><br>
+        </p>
+
+        <div class="btn-container">
+        <a href="grupo.html" class="btn">🔍 Explorar Grupos</a>
+        <a href="form.html" class="btn">🔍 Criar Grupo</a>
+        </div>
+        </div>
+        <div id="imagem-grupo">
+          <img src="../imagens/leitura.png">
+        </div>
+      </section>
+
+      <section id="grupos" class="section">
+        <div id="imagem-estante">
+          <img src="../imagens/estante_icon.png">
+        </div>
+
+        <div class="grupo-leitura">
+        <h3><img src="../imagens/book.png" class="icon-grupo-img" alt="Grupos de Leitura">Minha Estante</h3>
+        <p><b>Acesse a sua Estante</b><br>
+          Aqui é o seu espaço para organizar suas leituras no CoLeitura!
+          Aqui você pode classificar seus livros em:<br><br>
+
+        <ul>
+          <li><b>Estou Lendo:</b> Para os livros que você está acompanhando no momento.</li>
+          <li><b>Lido:</b> Para os livros que você já finalizou.</li>
+          <li><b>Quero Ler:</b> Para os títulos que você deseja começar futuramente.</li>
+        </ul> <br>
+
+        <b>Mantenha o controle da sua jornada de leitura de forma simples e prática!</b>
+        </p><br>
+
+        <div class="btn-container">
+        <a href="estante.html"class="btn">🔍 Acessar Minha Estante</a>
+        </div>
+        </div>
+
+      </section>
+
+      <section id="sobre" class="section">
+        <div id="texto-sobre">
+        <h3>🧾 Sobre o CoLeitura</h3>
+
+        <p>
+         O CoLeitura é um espaço criado para unir leitores que desejam compartilhar experiências 
+         literárias em grupo. Aqui, você pode criar ou entrar em grupos de leitura, descobrir
+         novos livros, trocar ideias e acompanhar leituras em conjunto.<br>
+
+        Nosso objetivo é tornar a leitura mais acessível, divertida e colaborativa. 
+        Seja você um leitor iniciante ou apaixonado por livros, aqui é o seu lugar!<br><br><br>
+
+        <h3>📚 O que você pode fazer no CoLeitura:</h3>
+
+        <div class="lista-e-imagem">
+         <ul>
+            <li>✏️Criar grupos de leitura com nome, livro e descrição</li>
+            <li>📎 Compartilhar arquivos em PDF dos livros</li>
+            <li>🔒Escolher se o grupo será público ou privado</li>
+            <li>🔍Descobrir novos gêneros e interagir com outros leitores</li><br><br>
+         </ul>
+        </div>
+
+        </p>
+
+        <p> Estamos construindo uma comunidade literária — <b>e você é parte essencial dela!</b> 💬✨</p>
+        </div>
+
+        <div id="imagem-grupo-lista">
+          <img src="../imagens/livro_voando.png">
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Coleitura</p>
+        <div class="footer-nav">
+          <div>👥<br />Amizades</div>
+          <div>🔄<br />Conectar</div>
+          <div>🏠<br />Início</div>
+          <div>⭐<br />Favoritos</div>
+          <div>💬<br />Mensagens</div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="../js/script.js"></script>
+  </body>
+</html>
