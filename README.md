@@ -74,73 +74,71 @@ Visão geral do site e apresentação da proposta de leitura colaborativa.
 
 <table>
   <tr>
-    <td><img src="coleitura/imagens/tela-inicial.png" width="500"></td>
+    <td><img src="coleitura/imagens-site/tela-inicial-01.png" width="500"></td>
+    <td><img src="coleitura/imagens-site/tela-inicial-02.png" width="500"></td>
   </tr>
 </table>
 
----
 
 ### 👥 Grupos de Leitura  
 Tela de grupos onde o usuário pode acessar o conteúdo do livro (relatório do projeto).
 
 <table>
   <tr>
-    <td><img src="coleitura/imagens/grupos-leitura.png" width="500"></td>
+    <td><img src="coleitura/imagens-site/grupo-leitura-01.png" width="500"></td>
   </tr>
-</table>
+</table>  
 
----
 
 ### 📖 Leitura por Capítulo  
 Simulação de capítulos com área dedicada para comentários.
 
 <table>
   <tr>
-    <td><img src="coleitura/imagens/leitura-capitulo.png" width="500"></td>
+    <td><img src="coleitura/imagens-site/grupo-leitura-02.png" width="500"></td>
+    <td><img src="coleitura/imagens-site/grupo-leitura-03.png" width="500"></td>
   </tr>
 </table>
 
----
-
-### 💬 Comentários e Spoilers  
-Sistema de comentários com opção de ativar ou desativar spoilers.
-
-<table>
-  <tr>
-    <td><img src="coleitura/imagens/comentarios-spoilers.png" width="500"></td>
-  </tr>
-</table>
-
----
 
 ### ➕ Criar Grupo de Leitura  
 Formulário para criação de novos grupos.
 
 <table>
   <tr>
-    <td><img src="coleitura/imagens/criar-grupo.png" width="500"></td>
+    <td><img src="coleitura/imagens-site/tela-form-01.png" width="500"></td>
+    <td><img src="coleitura/imagens-site/tela-form-02.png" width="500"></td>
   </tr>
 </table>
 
----
+
+### 📚 Minha Estante  
+Área personalizada do usuário onde ficam reunidos os livros.  
+
+<table>
+  <tr>
+    <td><img src="coleitura/imagens-site/tela-estante-01.png" width="500"></td>
+    <td><img src="coleitura/imagens-site/tela-estante-02.png" width="500"></td>
+  </tr>
+</table>
+
 
 ### 🔐 Login / Perfil  
 Tela de autenticação do usuário.
 
 <table>
   <tr>
-    <td><img src="coleitura/imagens/login.png" width="500"></td>
+    <td><img src="coleitura/imagens-site/tela-login.png" width="500"></td>
   </tr>
 </table>
 
----
 
 ### ℹ️ Sobre o App  
 Página explicando a ideia, objetivos e proposta do CoLeitura.
 
 <table>
   <tr>
-    <td><img src="coleitura/imagens/sobre.png" width="500"></td>
+    <td><img src="coleitura/imagens-site/tela-sobre.png" width="500"></td>
   </tr>
 </table>
 
